@@ -21,7 +21,14 @@ export default function App() {
       </header>
 
       <div className="controls">
-        <SearchBar value={query} onChange={setQuery} />
+        <SearchBar value={query}
+        onChange={
+          (value)=>{
+          setQuery(value);
+          setPage(1);//changed
+          }}
+
+        />
         <StatusFilter value={status} onChange={setStatus} />
       </div>
 
